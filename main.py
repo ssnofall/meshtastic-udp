@@ -86,6 +86,11 @@ def save_to_pcap(raw_data, ip_dir):
         f.write(pcap_header)
         f.write(raw_data)
 
+def pretty_print(msg):
+    f = getattr(msg, 'from')
+    print(f"From: !{f:x}")
+    print(f"To: !{msg.to:x}")
+
 while True:
     try:
         data, addr = sock.recvfrom(1024)
@@ -113,6 +118,7 @@ while True:
         save_to_json(packet_info, ip_dir)
 
         logging.info(f"Decoded MeshPacket:\n{msg}")
+        pretty_print(msg)
 
     except Exception as e:
         logging.error(f"Error decoding packet: {e}")
