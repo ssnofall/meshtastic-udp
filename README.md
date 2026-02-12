@@ -91,7 +91,6 @@ GNU General Public License v3.0
 - [snofall](https://github.com/ssnofall)
 - [mml](https://github.com/mml)
 
-
 ## Credits
 
 - [Meshtastic Project](https://meshtastic.org/) - Open-source mesh networking platform
