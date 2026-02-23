@@ -5,6 +5,12 @@ This tool monitors Meshtastic UDP packets, decodes them, and saves the decoded d
 <img src="/img/img1.jpg" alt="Mestastic Image" width="500px">
 
 
+## Key Configuration
+
+See **[KEYS.md](KEYS.md)** for instructions on:
+- Creating `private_keys.json` to decrypt PKI-encrypted private messages (Meshtastic 2.7.15+)
+- Adding channel PSK keys to `CHANNEL_KEYS` in `main2.py` for custom channels
+
 ## Features
 
 - Listens for UDP multicast packets from Meshtastic nodes
@@ -22,7 +28,9 @@ This tool monitors Meshtastic UDP packets, decodes them, and saves the decoded d
 
 ### Dependencies
 ```bash
-pip install protobuf
+pip install -r requirements.txt
+# or manually:
+pip install protobuf cryptography
 ```
 
 ## Meshtastic Device Setup
@@ -71,7 +79,7 @@ Download from the [Meshtastic protobufs repository](https://github.com/meshtasti
 
 **Import errors?**
 - Ensure `mesh_pb2.py` is in the same directory as `main.py`
-- Check protobuf installation: `pip install protobuf`
+- Install dependencies: `pip install -r requirements.txt`
 
 ## Use Cases
 
