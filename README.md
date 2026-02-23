@@ -28,7 +28,9 @@ See **[KEYS.md](KEYS.md)** for instructions on:
 
 ### Dependencies
 ```bash
-pip install protobuf
+pip install -r requirements.txt
+# or manually:
+pip install protobuf cryptography
 ```
 
 ## Meshtastic Device Setup
@@ -77,7 +79,7 @@ Download from the [Meshtastic protobufs repository](https://github.com/meshtasti
 
 **Import errors?**
 - Ensure `mesh_pb2.py` is in the same directory as `main.py`
-- Check protobuf installation: `pip install protobuf`
+- Install dependencies: `pip install -r requirements.txt`
 
 ## Use Cases
 
