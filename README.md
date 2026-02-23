@@ -5,6 +5,12 @@ This tool monitors Meshtastic UDP packets, decodes them, and saves the decoded d
 <img src="/img/img1.jpg" alt="Mestastic Image" width="500px">
 
 
+## Key Configuration
+
+See **[KEYS.md](KEYS.md)** for instructions on:
+- Creating `private_keys.json` to decrypt PKI-encrypted private messages (Meshtastic 2.7.15+)
+- Adding channel PSK keys to `CHANNEL_KEYS` in `main2.py` for custom channels
+
 ## Features
 
 - Listens for UDP multicast packets from Meshtastic nodes
